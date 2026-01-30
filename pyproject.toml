@@ -72,6 +72,7 @@ unfixable = []
 module = [
     "test.unit.*",
     "test.integration.*",
+    "pyexasol",
 ]
 ignore_errors = true
 ignore_missing_imports = true
