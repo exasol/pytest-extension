@@ -16,7 +16,7 @@ from nox import Session
 
 
 class Config(BaseConfig):
-    """Project specific configuration used by nox infrastructure"""
+    """Project-specific configuration used by nox infrastructure"""
 
     root: Path = Path(__file__).parent
     doc: Path = Path(__file__).parent / "doc"
@@ -30,14 +30,14 @@ class Config(BaseConfig):
     def pre_integration_tests_hook(
         _session: Session, _config: Config, _context: MutableMapping[str, Any]
     ) -> bool:
-        """Implement if project specific behaviour is required"""
+        """Implement if project-specific behavior is required"""
         return True
 
     @staticmethod
     def post_integration_tests_hook(
         _session: Session, _config: Config, _context: MutableMapping[str, Any]
     ) -> bool:
-        """Implement if project specific behaviour is required"""
+        """Implement if project-specific behavior is required"""
         return True
 
 
