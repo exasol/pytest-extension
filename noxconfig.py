@@ -46,5 +46,5 @@ PROJECT_CONFIG = Config(
     project_name="pytest_extension",
     python_versions=("3.10", "3.11", "3.12", "3.13"),
     # Uses SaaS; not ITDE DB versions
-    exasol_versions=[],
+    exasol_versions=(),
 )
