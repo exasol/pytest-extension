@@ -46,7 +46,5 @@ PROJECT_CONFIG = Config(
     project_name="pytest_extension",
     python_versions=("3.10", "3.11", "3.12", "3.13"),
     # Uses SaaS; not ITDE DB versions
-    exasol_versions=(
-        "8.29.13",
-    ),  # Workaround until https://github.com/exasol/python-toolbox/issues/682 is implemented.
+    exasol_versions=[],
 )
