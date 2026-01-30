@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import random
 import string
-from typing import (
-    Any,
+from collections.abc import (
     Callable,
     Iterable,
+)
+from typing import (
+    Any,
 )
 from urllib.parse import urlparse
 
