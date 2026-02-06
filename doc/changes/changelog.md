@@ -1,6 +1,6 @@
 # Changes
 
-* [unreleased](unreleased.md)
+* [1.0.0](1.0.0.md)
 * [0.2.5](changes_0.2.5.md)
 * [0.2.4](changes_0.2.4.md)
 * [0.2.3](changes_0.2.3.md)
@@ -14,7 +14,7 @@
 ---
 hidden:
 ---
-unreleased
+changes_1.0.0
 changes_0.2.5
 changes_0.2.4
 changes_0.2.3
