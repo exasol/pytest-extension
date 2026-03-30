@@ -28,11 +28,16 @@ jobs:
 
       - name: Run slow tests on Exasol SaaS
         id: run-integration-tests
-        run: poetry run -- nox -s test:integration -- --coverage
+        run: >
+          poetry run -- nox -s test:integration --
+          -rA --setup-show --capture=no
+          -o log_cli=true -o log_cli_level=INFO
+          --coverage
         env:
           SAAS_HOST: ${{ secrets.INTEGRATION_TEAM_SAAS_STAGING_HOST }}
           SAAS_ACCOUNT_ID: ${{ secrets.INTEGRATION_TEAM_SAAS_STAGING_ACCOUNT_ID }}
           SAAS_PAT: ${{ secrets.INTEGRATION_TEAM_SAAS_STAGING_PAT }}
+
       - name: Upload Artifacts
         id: upload-artifacts
         uses: actions/upload-artifact@v7
