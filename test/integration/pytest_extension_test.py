@@ -10,8 +10,7 @@ pytest_plugins = ["pytester"]
 
 
 def test_extension_all_backends(pytester):
-    test_code = dedent(
-        r"""
+    test_code = dedent(r"""
         import json
         import pytest
         import click
@@ -108,8 +107,7 @@ def test_extension_all_backends(pytester):
 
         def test_bucketfs_cli_args(backend, bucketfs_cli_args):
             validate_cli_args(backend, bucketfs_cli_args, StdTags.BFS, validate_bucketfs_std_params)       
-    """
-    )
+    """)
     pytester.makepyfile(test_code)
     result = pytester.runpytest("-s", BACKEND_OPTION, BACKEND_ALL)
     assert result.ret == pytest.ExitCode.OK
