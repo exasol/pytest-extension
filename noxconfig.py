@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from collections.abc import (
-    Iterable,
     MutableMapping,
 )
 from pathlib import Path
@@ -17,14 +16,6 @@ from nox import Session
 
 class Config(BaseConfig):
     """Project-specific configuration used by nox infrastructure"""
-
-    root: Path = Path(__file__).parent
-    doc: Path = Path(__file__).parent / "doc"
-    version_file: Path = (
-        Path(__file__).parent / "exasol" / "pytest_extension" / "version.py"
-    )
-    path_filters: Iterable[str] = ("dist", ".eggs", "venv", "metrics-schema")
-    source: Path = Path("exasol/pytest_extension")
 
     @staticmethod
     def pre_integration_tests_hook(

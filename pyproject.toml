@@ -1,14 +1,19 @@
 [project]
 name = "pytest-exasol-extension"
-version = "1.0.0"
-requires-python = ">=3.10,<3.14"
+version = "1.0.1"
 description = ""
-authors = [
-    {name="Mikhail Beck", email="mikhail.beck@exasol.com"}
-]
+authors = [{ name = "Mikhail Beck", email = "mikhail.beck@exasol.com" }]
+requires-python = ">=3.10,<3.14"
 readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
 dependencies = [
-    "pytest>=7,<9",
+    "pytest>=7,<10",
     "pytest-exasol-backend>=1.1,<2",
     "pyexasol>=1.0.0,<3",
     "exasol-python-extension-common>=0.12.1,<1",
@@ -18,14 +23,16 @@ dependencies = [
 [project.entry-points.pytest11]
 ext = "exasol.pytest_extension"
 
-[tool.poetry]
-requires-poetry = ">=2.1.0"
-packages = [{include = "exasol"}]
+[dependency-groups]
+dev = [
+    "exasol-toolbox>=7.0.0,<8",
+    "exasol-bucketfs>=1.0.0",
+    "click>=8.1.7,<9",
+]
 
-[tool.poetry.group.dev.dependencies]
-exasol-toolbox = ">=6.1.1,<7"
-exasol-bucketfs = ">=1.0.0"
-click = "^8.1.7"
+[tool.poetry]
+requires-poetry = ">=2.3.0"
+packages = [{include = "exasol"}]
 
 [build-system]
 requires = ["poetry_core>=2.0.0"]
@@ -72,13 +79,14 @@ unfixable = []
 module = [
     "test.unit.*",
     "test.integration.*",
-    "pyexasol",
 ]
 ignore_errors = true
 ignore_missing_imports = true
 
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+
 [tool.sonar]
 projectKey = "com.exasol:pytest-extension"
-hostUrl = "https://sonarcloud.io"
+host.url = "https://sonarcloud.io"
 organization = "exasol"
-exclusions = "exasol/pytest_extension/version.py"
