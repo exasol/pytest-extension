@@ -6,6 +6,7 @@ from collections.abc import (
     Callable,
     Iterable,
 )
+from importlib.metadata import version
 from typing import (
     Any,
 )
@@ -26,9 +27,8 @@ from tenacity import retry
 from tenacity.stop import stop_after_attempt
 from tenacity.wait import wait_exponential
 
-from importlib.metadata import version
-
 __version__ = version("pytest-exasol-extension")
+
 
 @pytest.fixture(scope="session")
 def db_schema_name() -> str:
