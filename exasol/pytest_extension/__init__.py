@@ -6,6 +6,7 @@ from collections.abc import (
     Callable,
     Iterable,
 )
+from importlib.metadata import version
 from typing import (
     Any,
 )
@@ -25,6 +26,8 @@ from exasol.python_extension_common.connections.bucketfs_location import (
 from tenacity import retry
 from tenacity.stop import stop_after_attempt
 from tenacity.wait import wait_exponential
+
+__version__ = version("pytest-exasol-extension")
 
 
 @pytest.fixture(scope="session")
