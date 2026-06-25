@@ -15,12 +15,12 @@ jobs:
     name: Build Matrix
     uses: ./.github/workflows/matrix.yml
     with:
-      matrix_keys_json: '["minimum_python_version"]'
+      matrix_keys_json: '["python_versions"]'
     permissions:
       contents: read
 
   run-integration-tests:
-    name: Run Integration Tests
+    name: Run Integration Tests (Python-${{ matrix.python_versions }})
     runs-on: "ubuntu-24.04"
     permissions:
       contents: read
@@ -47,7 +47,7 @@ jobs:
         id: allow-unprivileged-user-namespaces
         run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
-      - name: Run slow tests on Exasol SaaS
+      - name: Run Integration Tests
         id: run-integration-tests
         run: >
           poetry run -- nox -s test:integration --
