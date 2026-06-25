@@ -35,7 +35,7 @@ class Config(BaseConfig):
 PROJECT_CONFIG = Config(
     root_path=Path(__file__).parent,
     project_name="pytest_extension",
-    python_versions=("3.10", "3.11", "3.12", "3.13"),
+    python_versions=("3.10", "3.11", "3.12", "3.13", "3.14"),
     # Uses SaaS; not ITDE DB versions
     exasol_versions=(),
 )
