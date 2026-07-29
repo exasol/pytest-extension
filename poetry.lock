@@ -33,14 +33,14 @@ files = [
 
 [[package]]
 name = "annotated-doc"
-version = "0.0.4"
+version = "0.0.5"
 description = "Document parameters, class attributes, return types, and variables inline, with Annotated."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "annotated_doc-0.0.4-py3-none-any.whl", hash = "sha256:571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320"},
-    {file = "annotated_doc-0.0.4.tar.gz", hash = "sha256:fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4"},
+    {file = "annotated_doc-0.0.5-py3-none-any.whl", hash = "sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"},
+    {file = "annotated_doc-0.0.5.tar.gz", hash = "sha256:c7e58ce09192557605d8bbd92836d7e1d520ac9580096042c0bfd197efacf1bb"},
 ]
 
 [[package]]
@@ -49,12 +49,11 @@ version = "0.8.0"
 description = "Reusable constraint types to use with typing.Annotated"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "annotated_types-0.8.0-py3-none-any.whl", hash = "sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"},
     {file = "annotated_types-0.8.0.tar.gz", hash = "sha256:13b2beaad985e05e2d6407ee4c4f35590b11f8d693a258a561055cac8f64cab7"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [[package]]
 name = "anyio"
@@ -1226,45 +1225,11 @@ files = [
 
 [[package]]
 name = "exasol-integration-test-docker-environment"
-version = "4.4.1"
-description = "Integration Test Docker Environment for Exasol"
-optional = false
-python-versions = "<3.15,>=3.10"
-groups = ["main"]
-markers = "python_version >= \"3.12\""
-files = [
-    {file = "exasol_integration_test_docker_environment-4.4.1-py3-none-any.whl", hash = "sha256:1aaaac92ca0165435e617394d3ad2192b629a459356f227ac8ef6cf22bdd9863"},
-    {file = "exasol_integration_test_docker_environment-4.4.1.tar.gz", hash = "sha256:0f2cd9247189fdacfd54ab43653d97496b103a03fc7431499c80a38b7b4b315c"},
-]
-
-[package.dependencies]
-click = ">=7.0"
-docker = {version = ">=4.0.0,<7.0.0 || >7.0.0", markers = "sys_platform != \"win32\""}
-docutils = ">=0.21.2"
-exasol-error-reporting = ">=1.0.0,<2.0.0"
-fabric = ">=3.0.1,<4.0.0"
-gitpython = ">=2.1.0"
-humanfriendly = ">=4.18"
-importlib_resources = ">=5.4.0"
-jinja2 = ">=2.10.1"
-jsonpickle = ">=1.1"
-luigi = ">=2.8.4"
-netaddr = ">=0.7.19"
-networkx = ">=2.3"
-portalocker = ">=2.7.0,<3.0.0"
-pydot = ">=1.4.0"
-requests = ">=2.32.4"
-simplejson = ">=3.16.0"
-"stopwatch.py" = ">=1.0.0"
-
-[[package]]
-name = "exasol-integration-test-docker-environment"
 version = "6.4.1"
 description = "Integration Test Docker Environment for Exasol"
 optional = false
 python-versions = "<3.15,>=3.10"
 groups = ["main"]
-markers = "python_version < \"3.12\""
 files = [
     {file = "exasol_integration_test_docker_environment-6.4.1-py3-none-any.whl", hash = "sha256:c1132c00530455f6379d54582f36f7a5a92cb78fdb438c6d90df4621b9b9a4e4"},
     {file = "exasol_integration_test_docker_environment-6.4.1.tar.gz", hash = "sha256:3beca9f7dd354c48f22aa2a631e3e5aa05a89cd39bda41a88bbaccca977270df"},
@@ -1291,37 +1256,14 @@ simplejson = ">=3.16.0"
 
 [[package]]
 name = "exasol-python-extension-common"
-version = "0.13.1"
+version = "1.0.0"
 description = "A collection of common utilities for Exasol extensions."
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = "<3.15,>=3.10"
 groups = ["main"]
-markers = "python_version >= \"3.12\""
 files = [
-    {file = "exasol_python_extension_common-0.13.1-py3-none-any.whl", hash = "sha256:f03d3a9abc0434f3663f8bc8aae8864cdcfeb39775649b44d206a7d2b3976bdb"},
-    {file = "exasol_python_extension_common-0.13.1.tar.gz", hash = "sha256:f50655435f718bc15748a6b04b9a83ea26e42e8e5dfab05898ab63ecbb2c3a43"},
-]
-
-[package.dependencies]
-click = ">=8.1.7,<9.0.0"
-exasol-bucketfs = ">=0.10.0,<3"
-exasol-saas-api = ">=1.1.0,<3"
-exasol-script-languages-container-tool = ">=3,<4"
-pyexasol = ">=0.25.0,<3"
-requests = ">=2.33.0"
-tenacity = ">=8.3.0,<9.0.0"
-
-[[package]]
-name = "exasol-python-extension-common"
-version = "0.16.0"
-description = "A collection of common utilities for Exasol extensions."
-optional = false
-python-versions = "<3.14,>=3.10"
-groups = ["main"]
-markers = "python_version < \"3.12\""
-files = [
-    {file = "exasol_python_extension_common-0.16.0-py3-none-any.whl", hash = "sha256:39c5dfd27afa44a3bdc26f6b8e345da6ccf550c18a841f5754352a1d94ae7f3a"},
-    {file = "exasol_python_extension_common-0.16.0.tar.gz", hash = "sha256:60ad4e148244b7b62c3cc687fc63eb6406f8a45b6767e70ecda940aeaaf43f03"},
+    {file = "exasol_python_extension_common-1.0.0-py3-none-any.whl", hash = "sha256:b51396989927a416c6e2a08036eacb17d67323976096361fb004ad73b1224da9"},
+    {file = "exasol_python_extension_common-1.0.0.tar.gz", hash = "sha256:876b2fafa5ae655763fe47a70e73397f276209366fefbb7465a83516a431035d"},
 ]
 
 [package.dependencies]
@@ -1355,28 +1297,6 @@ python-dateutil = ">=2.8.0,<3.0.0"
 requests = ">=2.32.4,<3.0.0"
 tenacity = ">=8,<10"
 types-requests = ">=2.31.0.6,<3.0.0.0"
-
-[[package]]
-name = "exasol-script-languages-container-tool"
-version = "3.4.1"
-description = "Script Languages Container Tool"
-optional = false
-python-versions = "<4,>=3.10"
-groups = ["main"]
-markers = "python_version >= \"3.12\""
-files = [
-    {file = "exasol_script_languages_container_tool-3.4.1-py3-none-any.whl", hash = "sha256:d0fabc5a8bfab38c2ad6e13309ebce813051f5e4a13ecfd6e50775bffb733af4"},
-    {file = "exasol_script_languages_container_tool-3.4.1.tar.gz", hash = "sha256:43264a85f2dbc6455993923583a0b73a58c5fb7e987852779fd83d89e3c63e2b"},
-]
-
-[package.dependencies]
-exasol-bucketfs = ">=1,<3"
-exasol-integration-test-docker-environment = ">=4.1.0,<5.0.0"
-importlib_metadata = ">=4.6.0"
-importlib-resources = ">=6.4.0"
-jsonschema = ">=4.23.0,<5.0.0"
-networkx = ">=3.3.0,<4.0.0"
-pydantic = ">=2.10.2,<3.0.0"
 
 [[package]]
 name = "exasol-toolbox"
@@ -1877,12 +1797,12 @@ version = "9.0.0"
 description = "Read metadata from Python packages"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
+markers = "python_version < \"3.12\" and platform_machine != \"ppc64le\" and platform_machine != \"s390x\""
 files = [
     {file = "importlib_metadata-9.0.0-py3-none-any.whl", hash = "sha256:2d21d1cc5a017bd0559e36150c21c830ab1dc304dedd1b7ea85d20f45ef3edd7"},
     {file = "importlib_metadata-9.0.0.tar.gz", hash = "sha256:a4f57ab599e6a2e3016d7595cfd72eb4661a5106e787a95bcc90c7105b831efc"},
 ]
-markers = {main = "python_version >= \"3.12\"", dev = "platform_machine != \"ppc64le\" and platform_machine != \"s390x\" and python_version < \"3.12\""}
 
 [package.dependencies]
 zipp = ">=3.20"
@@ -1902,12 +1822,11 @@ version = "7.1.0"
 description = "Read resources from Python packages"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "importlib_resources-7.1.0-py3-none-any.whl", hash = "sha256:1bd7b48b4088eddb2cd16382150bb515af0bd2c70128194392725f82ad2c96a1"},
     {file = "importlib_resources-7.1.0.tar.gz", hash = "sha256:0722d4c6212489c530f2a145a34c0a7a3b4721bc96a15fada5930e2a0b760708"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.extras]
 check = ["pytest-checkdocs (>=2.14)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
@@ -2127,12 +2046,11 @@ version = "4.26.0"
 description = "An implementation of JSON Schema validation for Python"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "jsonschema-4.26.0-py3-none-any.whl", hash = "sha256:d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"},
     {file = "jsonschema-4.26.0.tar.gz", hash = "sha256:0c26707e2efad8aa1bfc5b7ce170f3fccc2e4918ff85989ba9ffa9facb2be326"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 attrs = ">=22.2.0"
@@ -2159,12 +2077,11 @@ version = "2025.9.1"
 description = "The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
 optional = false
 python-versions = ">=3.9"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "jsonschema_specifications-2025.9.1-py3-none-any.whl", hash = "sha256:98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"},
     {file = "jsonschema_specifications-2025.9.1.tar.gz", hash = "sha256:b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 referencing = ">=0.31.0"
@@ -3366,12 +3283,11 @@ version = "2.13.4"
 description = "Data validation using Python type hints"
 optional = false
 python-versions = ">=3.9"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "pydantic-2.13.4-py3-none-any.whl", hash = "sha256:45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba"},
     {file = "pydantic-2.13.4.tar.gz", hash = "sha256:c40756b57adaa8b1efeeced5c196f3f3b7c435f90e84ea7f443901bec8099ef6"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 annotated-types = ">=0.6.0"
@@ -3389,7 +3305,7 @@ version = "2.46.4"
 description = "Core functionality for Pydantic validation and serialization"
 optional = false
 python-versions = ">=3.9"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "pydantic_core-2.46.4-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:a396dcc17e5a0b164dbe026896245a4fa9ff402edca1dff0be3d53a517f74de4"},
     {file = "pydantic_core-2.46.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:da4b951fe36dc7c3a1ccb4e3cd1747c3542b8c9ceede8fc86cae054e764485f5"},
@@ -3512,7 +3428,6 @@ files = [
     {file = "pydantic_core-2.46.4-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:d51026d73fcfd93610abc7b27789c26b313920fcfb20e27462d74a7f8b06e983"},
     {file = "pydantic_core-2.46.4.tar.gz", hash = "sha256:62f875393d7f270851f20523dd2e29f082bcc82292d66db2b64ea71f64b6e1c1"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 typing-extensions = ">=4.14.1"
@@ -4036,12 +3951,11 @@ version = "0.37.0"
 description = "JSON Referencing + Python"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "referencing-0.37.0-py3-none-any.whl", hash = "sha256:381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"},
     {file = "referencing-0.37.0.tar.gz", hash = "sha256:44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 attrs = ">=22.2.0"
@@ -4308,7 +4222,8 @@ version = "2026.6.3"
 description = "Python bindings to Rust's persistent data structures (rpds)"
 optional = false
 python-versions = ">=3.11"
-groups = ["main", "dev"]
+groups = ["dev"]
+markers = "python_version >= \"3.11\""
 files = [
     {file = "rpds_py-2026.6.3-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:7b689145a1485c335569bd056464f3243a29af7ed3871c7be31ad624ba239bc7"},
     {file = "rpds_py-2026.6.3-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:db08f45aecde626498fb3df07bcf6d2ec040af42e859a4f5040d79c200342911"},
@@ -4427,7 +4342,6 @@ files = [
     {file = "rpds_py-2026.6.3-pp311-pypy311_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:8e65860d238379ed982fd9ba690579b5e95af2f4840f99c772816dbe573cb826"},
     {file = "rpds_py-2026.6.3.tar.gz", hash = "sha256:1cebd1337c242e4ec2293e541f712b2da849b29f48f0c293684b71c0632625d4"},
 ]
-markers = {main = "python_version >= \"3.12\"", dev = "python_version >= \"3.11\""}
 
 [[package]]
 name = "ruamel-yaml"
@@ -5491,6 +5405,7 @@ files = [
     {file = "typing_extensions-4.16.0-py3-none-any.whl", hash = "sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"},
     {file = "typing_extensions-4.16.0.tar.gz", hash = "sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"},
 ]
+markers = {main = "python_version <= \"3.12\""}
 
 [[package]]
 name = "typing-inspection"
@@ -5498,12 +5413,11 @@ version = "0.4.2"
 description = "Runtime typing introspection tools"
 optional = false
 python-versions = ">=3.9"
-groups = ["main", "dev"]
+groups = ["dev"]
 files = [
     {file = "typing_inspection-0.4.2-py3-none-any.whl", hash = "sha256:4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7"},
     {file = "typing_inspection-0.4.2.tar.gz", hash = "sha256:ba561c48a67c5958007083d386c3295464928b01faa735ab8547c5692e87f464"},
 ]
-markers = {main = "python_version >= \"3.12\""}
 
 [package.dependencies]
 typing-extensions = ">=4.12.0"
@@ -5754,12 +5668,12 @@ version = "4.1.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["dev"]
+markers = "python_version < \"3.12\" and platform_machine != \"ppc64le\" and platform_machine != \"s390x\""
 files = [
     {file = "zipp-4.1.0-py3-none-any.whl", hash = "sha256:25ad4e16390cd314347dd8f1de67a2ac538ae658ed4ab9db16029c07c188e97f"},
     {file = "zipp-4.1.0.tar.gz", hash = "sha256:4cb57381f544315db7688e976e922a2b18cdb513d21cc194eb42232ba2a3e602"},
 ]
-markers = {main = "python_version >= \"3.12\"", dev = "platform_machine != \"ppc64le\" and platform_machine != \"s390x\" and python_version < \"3.12\""}
 
 [package.extras]
 check = ["pytest-checkdocs (>=2.14)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
@@ -5793,4 +5707,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.15"
-content-hash = "c74bb4ec37c3bd7d8f84a99f8c9f8a426e3aca3de6b7d9315cf19ad1a79a8654"
+content-hash = "61c7d05dd2392a652411f7b9aa4e2c2b5f03bf3018ae57f5bebabd375047b8fd"
