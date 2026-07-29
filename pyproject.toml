@@ -1,9 +1,9 @@
 [project]
 name = "pytest-exasol-extension"
-version = "1.0.1"
+version = "1.1.0"
 description = ""
 authors = [{ name = "Mikhail Beck", email = "mikhail.beck@exasol.com" }]
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.10,<3.15"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -11,12 +11,13 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
     "pytest>=7,<10",
     "pytest-exasol-backend>=1.1,<2",
     "pyexasol>=1.0.0,<3",
-    "exasol-python-extension-common>=0.12.1,<1",
+    "exasol-python-extension-common>=1,<2",
     "exasol-saas-api>=2.3,<3",
 ]
 
